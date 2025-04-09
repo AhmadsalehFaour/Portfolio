@@ -1,0 +1,969 @@
+/* Accessibility Optimizations for Dark Theme */
+
+/* Improved Color Contrast */
+:root {
+  /* Enhanced contrast color palette */
+  --primary-color: #7c74ff; /* Slightly brighter than original */
+  --primary-dark: #6a61e0;
+  --secondary-color: #ff7b7b; /* Slightly brighter than original */
+  --text-primary: #ffffff;
+  --text-secondary: #d9d9d9; /* Brighter than original for better contrast */
+  --text-muted: #a6a6a6; /* Brighter than original for better contrast */
+  --border-color: #444444; /* Slightly brighter for better visibility */
+}
+
+/* Focus States */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus,
+.form-control:focus,
+.btn:focus,
+.nav-link:focus,
+.social-icons a:focus {
+  outline: 3px solid var(--primary-color);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 3px rgba(124, 116, 255, 0.5);
+}
+
+/* Skip to Content Link */
+.skip-to-content {
+  position: absolute;
+  top: -50px;
+  left: 10px;
+  padding: 10px 15px;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  font-weight: 600;
+  z-index: 10000;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: top 0.3s ease;
+}
+
+.skip-to-content:focus {
+  top: 10px;
+}
+
+/* Screen Reader Text */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .cursor-dot,
+  .cursor-outline {
+    display: none !important;
+  }
+  
+  .preloader {
+    display: none !important;
+  }
+  
+  .typing-effect {
+    border-right: none !important;
+  }
+  
+  .progress-bar::after {
+    animation: none !important;
+  }
+  
+  .floating,
+  .pulse,
+  .glow,
+  .typing {
+    animation: none !important;
+  }
+  
+  html {
+    scroll-behavior: auto !important;
+  }
+  
+  [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  
+  .stagger-animation > * {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* High Contrast Mode Support */
+@media (forced-colors: active) {
+  :root {
+    --primary-color: CanvasText;
+    --secondary-color: CanvasText;
+    --text-primary: CanvasText;
+    --text-secondary: CanvasText;
+    --border-color: CanvasText;
+  }
+  
+  .btn-primary,
+  .btn-outline-primary:hover,
+  .progress-bar,
+  .timeline-icon,
+  .education-icon,
+  .certification-icon,
+  .contact-item i,
+  .back-to-top,
+  .badge {
+    forced-color-adjust: none;
+    background: Canvas !important;
+    color: CanvasText !important;
+    border: 1px solid CanvasText !important;
+  }
+  
+  .social-icons a,
+  .detail-item i {
+    forced-color-adjust: none;
+    background: Canvas !important;
+    color: CanvasText !important;
+    border: 1px solid CanvasText !important;
+  }
+  
+  .card, .timeline-content, .skill-item, .project-card, .contact-info, .contact-form-container {
+    background-color: Canvas !important;
+    border: 1px solid CanvasText !important;
+  }
+  
+  .text-gradient, 
+  .header-content h1,
+  .skill-icon,
+  .skill-category h3 i,
+  .education-section h3 i, 
+  .certifications-section h3 i {
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    background-clip: unset !important;
+    -webkit-text-fill-color: CanvasText !important;
+    text-fill-color: CanvasText !important;
+    color: CanvasText !important;
+  }
+}
+
+/* Improved Text Readability */
+body {
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+p, li, .form-label, .btn, .nav-link {
+  font-size: 1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.4;
+}
+
+/* Improved Link Underlines */
+a:not(.btn):not(.nav-link):not(.social-icons a):not(.footer-links a) {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+a:not(.btn):not(.nav-link):not(.social-icons a):not(.footer-links a):hover {
+  text-decoration-thickness: 2px;
+}
+
+/* Improved Form Accessibility */
+.form-label {
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.form-control {
+  padding: 12px 15px;
+  font-size: 1rem;
+}
+
+.form-control::placeholder {
+  color: var(--text-muted);
+  opacity: 0.8;
+}
+
+/* Improved Button Accessibility */
+.btn {
+  padding: 12px 24px;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 50px;
+}
+
+/* Improved Icon Accessibility */
+.skill-icon,
+.timeline-icon i,
+.education-icon i,
+.certification-icon i,
+.contact-item i,
+.social-icons i,
+.footer-contact i {
+  font-size: 1.5rem;
+}
+
+/* Improved Badge Accessibility */
+.badge {
+  padding: 6px 12px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  border-radius: 20px;
+}
+
+/* Improved Progress Bar Accessibility */
+.progress {
+  height: 10px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.progress-bar {
+  border-radius: 5px;
+}
+
+/* Improved Card Accessibility */
+.card, .project-card, .skill-item, .timeline-content, .contact-info, .contact-form-container {
+  border-radius: 10px;
+  padding: 20px;
+}
+
+/* Improved Navigation Accessibility */
+.navbar-nav .nav-link {
+  padding: 10px 15px;
+  font-weight: 500;
+}
+
+/* Improved Footer Accessibility */
+.footer-links a,
+.footer-contact li {
+  padding: 5px 0;
+  display: inline-block;
+}
+
+/* Improved Social Icons Accessibility */
+.social-icons a {
+  width: 45px;
+  height: 45px;
+  font-size: 1.2rem;
+}
+
+/* Improved Back to Top Button Accessibility */
+.back-to-top {
+  width: 50px;
+  height: 50px;
+  font-size: 1.2rem;
+  border-radius: 50%;
+}
+
+/* Improved Section Spacing */
+section {
+  padding: 100px 0;
+}
+
+.section-header {
+  margin-bottom: 60px;
+}
+
+/* Improved Timeline Accessibility */
+.timeline-content {
+  padding: 25px;
+}
+
+.timeline-title {
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+}
+
+.timeline-company {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+/* Improved Education Item Accessibility */
+.education-item,
+.certification-item {
+  margin-bottom: 30px;
+}
+
+.education-content h4,
+.certification-content h4 {
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+}
+
+/* Improved Contact Item Accessibility */
+.contact-item {
+  margin-bottom: 20px;
+}
+
+.contact-item h4 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+/* Improved Keyboard Navigation */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+.form-control:focus-visible,
+.btn:focus-visible,
+.nav-link:focus-visible,
+.social-icons a:focus-visible {
+  outline: 3px solid var(--primary-color);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 3px rgba(124, 116, 255, 0.5);
+}
+
+/* Improved Tap Targets for Mobile */
+@media (max-width: 767px) {
+  .nav-link,
+  .btn,
+  .social-icons a,
+  .footer-links a {
+    padding: 12px 16px;
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Improved ARIA Support */
+[aria-hidden="true"] {
+  display: none !important;
+}
+
+/* Improved Focus Indicators */
+.keyboard-focus {
+  outline: 3px solid var(--primary-color) !important;
+  outline-offset: 3px !important;
+  box-shadow: 0 0 0 3px rgba(124, 116, 255, 0.5) !important;
+}
+
+/* Improved Text Contrast */
+.text-muted {
+  color: var(--text-muted) !important;
+}
+
+.text-secondary {
+  color: var(--text-secondary) !important;
+}
+
+/* Improved Link Contrast */
+a {
+  color: var(--primary-color);
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+/* Improved Form Field Contrast */
+.form-control {
+  color: var(--text-primary);
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+}
+
+.form-control:focus {
+  color: var(--text-primary);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: var(--primary-color);
+}
+
+/* Improved Button Contrast */
+.btn-primary {
+  background: linear-gradient(45deg, var(--primary-color), var(--primary-dark));
+  color: var(--text-primary);
+}
+
+.btn-outline-light {
+  color: var(--text-primary);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Improved Badge Contrast */
+.badge {
+  background: linear-gradient(45deg, var(--primary-color), var(--primary-dark));
+  color: var(--text-primary);
+}
+
+/* Improved Progress Bar Contrast */
+.progress {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Improved Card Contrast */
+.card, .project-card, .skill-item, .timeline-content, .contact-info, .contact-form-container {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+}
+
+/* Improved Navigation Contrast */
+.navbar {
+  background-color: rgba(18, 18, 18, 0.9);
+}
+
+.navbar-nav .nav-link {
+  color: var(--text-secondary);
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: var(--text-primary);
+}
+
+/* Improved Footer Contrast */
+.footer {
+  background-color: var(--darker-bg);
+}
+
+.footer-links a {
+  color: var(--text-secondary);
+}
+
+.footer-links a:hover {
+  color: var(--primary-color);
+}
+
+/* Improved Social Icons Contrast */
+.social-icons a {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--text-primary);
+}
+
+.social-icons a:hover {
+  color: var(--text-primary);
+}
+
+/* Improved Back to Top Button Contrast */
+.back-to-top {
+  background: linear-gradient(45deg, var(--primary-color), var(--primary-dark));
+  color: var(--text-primary);
+}
+
+/* Improved Timeline Contrast */
+.timeline-icon {
+  background: linear-gradient(45deg, var(--primary-color), var(--primary-dark));
+  color: var(--text-primary);
+}
+
+/* Improved Education Icon Contrast */
+.education-icon,
+.certification-icon {
+  background: linear-gradient(45deg, var(--primary-color), var(--primary-dark));
+  color: var(--text-primary);
+}
+
+/* Improved Contact Item Icon Contrast */
+.contact-item i {
+  background: linear-gradient(45deg, var(--primary-color), var(--primary-dark));
+  color: var(--text-primary);
+}
+
+/* Improved Detail Item Icon Contrast */
+.detail-item i {
+  background: linear-gradient(45deg, var(--primary-color), var(--primary-dark));
+  color: var(--text-primary);
+}
+
+/* Improved Section Header Contrast */
+.section-header h2 {
+  color: var(--text-primary);
+}
+
+.section-divider {
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+}
+
+/* Improved Skill Icon Contrast */
+.skill-icon {
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+}
+
+/* Improved Header Content Contrast */
+.header-content h1 {
+  background: linear-gradient(90deg, var(--text-primary), var(--primary-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+}
+
+/* Improved Form Validation */
+.form-control.is-invalid {
+  border-color: var(--danger-color);
+  background-color: rgba(244, 67, 54, 0.1);
+}
+
+.form-control.is-valid {
+  border-color: var(--success-color);
+  background-color: rgba(76, 175, 80, 0.1);
+}
+
+/* Improved Error Messages */
+.invalid-feedback {
+  color: var(--danger-color);
+  font-size: 0.875rem;
+  margin-top: 5px;
+}
+
+/* Improved Success Messages */
+.valid-feedback {
+  color: var(--success-color);
+  font-size: 0.875rem;
+  margin-top: 5px;
+}
+
+/* Improved Alert Messages */
+.alert {
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.alert-success {
+  background-color: rgba(76, 175, 80, 0.1);
+  border: 1px solid rgba(76, 175, 80, 0.3);
+  color: var(--success-color);
+}
+
+.alert-danger {
+  background-color: rgba(244, 67, 54, 0.1);
+  border: 1px solid rgba(244, 67, 54, 0.3);
+  color: var(--danger-color);
+}
+
+.alert-info {
+  background-color: rgba(3, 169, 244, 0.1);
+  border: 1px solid rgba(3, 169, 244, 0.3);
+  color: var(--info-color);
+}
+
+.alert-warning {
+  background-color: rgba(255, 152, 0, 0.1);
+  border: 1px solid rgba(255, 152, 0, 0.3);
+  color: var(--warning-color);
+}
+
+/* Improved Tooltip */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltip-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: var(--darker-bg);
+  color: var(--text-primary);
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: var(--darker-bg) transparent transparent transparent;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Improved Accessibility for Interactive Elements */
+button, 
+.btn, 
+a.nav-link, 
+.social-icons a, 
+.back-to-top {
+  cursor: pointer;
+}
+
+/* Improved Accessibility for Disabled Elements */
+button:disabled, 
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Improved Accessibility for Required Form Fields */
+.form-label.required::after {
+  content: "*";
+  color: var(--danger-color);
+  margin-left: 4px;
+}
+
+/* Improved Accessibility for Form Field Descriptions */
+.form-text {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  margin-top: 5px;
+}
+
+/* Improved Accessibility for Form Field Groups */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Improved Accessibility for Form Field Legends */
+legend {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Improved Accessibility for Form Field Fieldsets */
+fieldset {
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* Improved Accessibility for Form Field Checkboxes and Radios */
+.form-check {
+  padding-left: 30px;
+  margin-bottom: 10px;
+}
+
+.form-check-input {
+  width: 20px;
+  height: 20px;
+  margin-left: -30px;
+  margin-top: 3px;
+}
+
+.form-check-label {
+  font-size: 1rem;
+}
+
+/* Improved Accessibility for Form Field Select */
+select.form-control {
+  padding-right: 30px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23ffffff' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px 12px;
+  appearance: none;
+}
+
+/* Improved Accessibility for Form Field Textarea */
+textarea.form-control {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Improved Accessibility for Form Field File Input */
+input[type="file"].form-control {
+  padding: 10px;
+  height: auto;
+}
+
+/* Improved Accessibility for Form Field Range Input */
+input[type="range"].form-control {
+  height: 30px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+
+/* Improved Accessibility for Form Field Color Input */
+input[type="color"].form-control {
+  height: 40px;
+  padding: 5px;
+}
+
+/* Improved Accessibility for Form Field Date Input */
+input[type="date"].form-control,
+input[type="time"].form-control,
+input[type="datetime-local"].form-control {
+  height: 40px;
+}
+
+/* Improved Accessibility for Form Field Number Input */
+input[type="number"].form-control {
+  padding-right: 10px;
+}
+
+/* Improved Accessibility for Form Field Password Input */
+input[type="password"].form-control {
+  letter-spacing: 0.1em;
+}
+
+/* Improved Accessibility for Form Field Search Input */
+input[type="search"].form-control {
+  padding-left: 40px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23ffffff' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: left 10px center;
+  background-size: 20px 20px;
+}
+
+/* Improved Accessibility for Form Field URL Input */
+input[type="url"].form-control {
+  padding-left: 40px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23ffffff' viewBox='0 0 16 16'%3E%3Cpath d='M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.002 1.002 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z'/%3E%3Cpath d='M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243L6.586 4.672z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: left 10px center;
+  background-size: 20px 20px;
+}
+
+/* Improved Accessibility for Form Field Email Input */
+input[type="email"].form-control {
+  padding-left: 40px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23ffffff' viewBox='0 0 16 16'%3E%3Cpath d='M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.708 2.825L15 11.105V5.383zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741zM1 11.105l4.708-2.897L1 5.383v5.722z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: left 10px center;
+  background-size: 20px 20px;
+}
+
+/* Improved Accessibility for Form Field Tel Input */
+input[type="tel"].form-control {
+  padding-left: 40px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23ffffff' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: left 10px center;
+  background-size: 20px 20px;
+}
+
+/* Improved Accessibility for Form Submit Button */
+button[type="submit"] {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* Improved Accessibility for Form Reset Button */
+button[type="reset"] {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* Improved Accessibility for Form Button Group */
+.btn-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Improved Accessibility for Form Button Group Vertical */
+.btn-group-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Improved Accessibility for Form Button Group Justified */
+.btn-group-justified {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.btn-group-justified .btn {
+  flex: 1;
+}
+
+/* Improved Accessibility for Form Button Group Toggle */
+.btn-group-toggle {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.btn-group-toggle .btn {
+  flex: 1;
+}
+
+.btn-group-toggle .btn.active {
+  background-color: var(--primary-color);
+  color: var(--text-primary);
+}
+
+/* Improved Accessibility for Form Button Group Checkbox */
+.btn-group-checkbox {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.btn-group-checkbox .btn {
+  flex: 1;
+}
+
+.btn-group-checkbox .btn.active {
+  background-color: var(--primary-color);
+  color: var(--text-primary);
+}
+
+/* Improved Accessibility for Form Button Group Radio */
+.btn-group-radio {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.btn-group-radio .btn {
+  flex: 1;
+}
+
+.btn-group-radio .btn.active {
+  background-color: var(--primary-color);
+  color: var(--text-primary);
+}
+
+/* Improved Accessibility for Form Input Group */
+.input-group {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.input-group-prepend,
+.input-group-append {
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+}
+
+.input-group-prepend {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-right: none;
+}
+
+.input-group-append {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-left: none;
+}
+
+.input-group .form-control {
+  flex: 1;
+  border-radius: 0;
+}
+
+.input-group .form-control:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.input-group .form-control:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+/* Improved Accessibility for Form Input Group Button */
+.input-group-btn {
+  display: flex;
+}
+
+.input-group-btn .btn {
+  border-radius: 0;
+}
+
+.input-group-btn:first-child .btn {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.input-group-btn:last-child .btn {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+/* Improved Accessibility for Form Input Group Text */
+.input-group-text {
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+}
+
+/* Improved Accessibility for Form Input Group Addon */
+.input-group-addon {
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+}
+
+/* Improved Accessibility for Form Input Group Sizing */
+.input-group-sm .form-control,
+.input-group-sm .input-group-prepend,
+.input-group-sm .input-group-append,
+.input-group-sm .input-group-text,
+.input-group-sm .input-group-addon,
+.input-group-sm .btn {
+  padding: 5px 10px;
+  font-size: 0.875rem;
+}
+
+.input-group-lg .form-control,
+.input-group-lg .input-group-prepend,
+.input-group-lg .input-group-append,
+.input-group-lg .input-group-text,
+.input-group-lg .input-group-addon,
+.input-group-lg .btn {
+  padding: 15px 20px;
+  font-size: 1.25rem;
+}

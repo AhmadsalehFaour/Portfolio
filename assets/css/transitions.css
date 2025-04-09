@@ -1,0 +1,857 @@
+/* Smooth Transitions and Animations CSS */
+
+/* Page Transition Effects */
+.page-transition {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--darker-bg);
+  z-index: 9998;
+  transform: translateY(100%);
+  transition: transform 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.page-transition.active {
+  transform: translateY(0);
+}
+
+.page-transition.exit {
+  transform: translateY(-100%);
+}
+
+/* Smooth Scroll Behavior */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+/* Section Reveal Animations */
+[data-aos] {
+  opacity: 0;
+  transition-property: opacity, transform;
+  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1.0);
+}
+
+[data-aos="fade-up"] {
+  transform: translateY(50px);
+}
+
+[data-aos="fade-down"] {
+  transform: translateY(-50px);
+}
+
+[data-aos="fade-right"] {
+  transform: translateX(-50px);
+}
+
+[data-aos="fade-left"] {
+  transform: translateX(50px);
+}
+
+[data-aos="zoom-in"] {
+  transform: scale(0.9);
+}
+
+[data-aos="zoom-out"] {
+  transform: scale(1.1);
+}
+
+[data-aos="flip-up"] {
+  transform: perspective(2500px) rotateX(-100deg);
+}
+
+[data-aos="flip-down"] {
+  transform: perspective(2500px) rotateX(100deg);
+}
+
+[data-aos="flip-right"] {
+  transform: perspective(2500px) rotateY(-100deg);
+}
+
+[data-aos="flip-left"] {
+  transform: perspective(2500px) rotateY(100deg);
+}
+
+[data-aos].aos-animate {
+  opacity: 1;
+  transform: translateY(0) translateX(0) scale(1) rotate(0) rotateX(0) rotateY(0);
+}
+
+/* Staggered Animation for Lists */
+.stagger-animation > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.stagger-animation.animate > *:nth-child(1) {
+  transition-delay: 0.1s;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stagger-animation.animate > *:nth-child(2) {
+  transition-delay: 0.2s;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stagger-animation.animate > *:nth-child(3) {
+  transition-delay: 0.3s;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stagger-animation.animate > *:nth-child(4) {
+  transition-delay: 0.4s;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stagger-animation.animate > *:nth-child(5) {
+  transition-delay: 0.5s;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stagger-animation.animate > *:nth-child(6) {
+  transition-delay: 0.6s;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stagger-animation.animate > *:nth-child(7) {
+  transition-delay: 0.7s;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stagger-animation.animate > *:nth-child(8) {
+  transition-delay: 0.8s;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Smooth Image Reveal */
+.image-reveal {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-reveal img {
+  transform: scale(1.1);
+  transition: transform 1.5s cubic-bezier(0.25, 0.1, 0.25, 1.0);
+}
+
+.image-reveal:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-color);
+  transform: translateX(-100%);
+  z-index: 1;
+  transition: transform 1s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.image-reveal:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--secondary-color);
+  transform: translateX(-100%);
+  z-index: 2;
+  transition: transform 1s cubic-bezier(0.77, 0, 0.175, 1);
+  transition-delay: 0.1s;
+}
+
+.image-reveal.reveal:before {
+  transform: translateX(100%);
+}
+
+.image-reveal.reveal:after {
+  transform: translateX(100%);
+}
+
+.image-reveal.reveal img {
+  transform: scale(1);
+}
+
+/* Text Reveal Animation */
+.text-reveal {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.text-reveal span {
+  display: inline-block;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1.0), opacity 0.8s ease;
+}
+
+.text-reveal.reveal span {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Split Text Animation */
+.split-text {
+  visibility: hidden;
+}
+
+.split-text .char {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.split-text.reveal .char {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Smooth Progress Bar Animation */
+.progress-bar {
+  width: 0;
+  transition: width 1.5s cubic-bezier(0.25, 0.1, 0.25, 1.0);
+}
+
+.progress-bar.animate {
+  width: var(--progress-width);
+}
+
+/* Smooth Counter Animation */
+.counter {
+  display: inline-block;
+  visibility: hidden;
+}
+
+.counter.visible {
+  visibility: visible;
+}
+
+/* Smooth Timeline Animation */
+.timeline-item {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1.0);
+}
+
+.timeline-item.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timeline-item:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.timeline-item:nth-child(2) {
+  transition-delay: 0.3s;
+}
+
+.timeline-item:nth-child(3) {
+  transition-delay: 0.5s;
+}
+
+.timeline-item:nth-child(4) {
+  transition-delay: 0.7s;
+}
+
+.timeline-item:nth-child(5) {
+  transition-delay: 0.9s;
+}
+
+/* Smooth Skill Item Animation */
+.skill-item {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1.0);
+}
+
+.skill-item.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Smooth Project Card Animation */
+.project-card {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1.0);
+}
+
+.project-card.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Smooth Navigation Animation */
+.navbar {
+  transition: background-color 0.5s ease, padding 0.5s ease, box-shadow 0.5s ease;
+}
+
+.navbar-brand {
+  transition: font-size 0.5s ease;
+}
+
+.nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover:after,
+.nav-link.active:after {
+  width: 100%;
+}
+
+/* Smooth Button Hover Animation */
+.btn {
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1.0), 
+              box-shadow 0.3s ease, 
+              color 0.3s ease;
+}
+
+.btn:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+                transparent 0%, 
+                rgba(255, 255, 255, 0.2) 50%, 
+                transparent 100%);
+  transition: left 0.7s ease;
+  z-index: -1;
+}
+
+.btn:hover:before {
+  left: 100%;
+}
+
+/* Smooth Social Icons Animation */
+.social-icons a {
+  transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1.0), 
+              color 0.3s ease, 
+              background-color 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: translateY(-8px) rotate(360deg);
+}
+
+/* Smooth Back to Top Button Animation */
+.back-to-top {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, 
+              visibility 0.5s ease, 
+              transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1.0), 
+              background-color 0.5s ease;
+}
+
+.back-to-top.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Smooth Form Input Animation */
+.form-control {
+  transition: border-color 0.3s ease, 
+              box-shadow 0.3s ease, 
+              background-color 0.3s ease, 
+              transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1.0);
+}
+
+.form-control:focus {
+  transform: translateY(-3px);
+}
+
+/* Smooth Scroll Indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 50px;
+  border: 2px solid var(--text-primary);
+  border-radius: 15px;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.scroll-indicator:before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  margin-left: -3px;
+  background-color: var(--text-primary);
+  border-radius: 50%;
+  animation: scrollIndicator 2s infinite;
+}
+
+@keyframes scrollIndicator {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+}
+
+/* Smooth Section Transitions */
+section {
+  transition: background-color 0.5s ease, padding 0.5s ease;
+}
+
+/* Smooth Card Hover Effect */
+.card {
+  transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1.0), 
+              box-shadow 0.5s ease, 
+              border-color 0.5s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+/* Smooth Image Hover Effect */
+.about-image img {
+  transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1.0), 
+              box-shadow 0.5s ease, 
+              border 0.5s ease;
+}
+
+.about-image:hover img {
+  transform: scale(1.05);
+}
+
+/* Smooth Contact Item Animation */
+.contact-item {
+  transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1.0);
+}
+
+.contact-item:hover {
+  transform: translateX(10px);
+}
+
+.contact-item i {
+  transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1.0), 
+              background 0.3s ease;
+}
+
+.contact-item:hover i {
+  transform: rotate(360deg);
+}
+
+/* Smooth Footer Link Animation */
+.footer-links li {
+  transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1.0);
+}
+
+.footer-links li:hover {
+  transform: translateX(10px);
+}
+
+/* Smooth Badge Animation */
+.badge {
+  transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1.0), 
+              box-shadow 0.3s ease;
+}
+
+.badge:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(108, 99, 255, 0.3);
+}
+
+/* Smooth Timeline Icon Animation */
+.timeline-icon {
+  transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1.0), 
+              box-shadow 0.5s ease;
+}
+
+.timeline-item:hover .timeline-icon {
+  transform: scale(1.2) rotate(360deg);
+}
+
+/* Smooth Education Icon Animation */
+.education-icon, 
+.certification-icon {
+  transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1.0);
+}
+
+.education-item:hover .education-icon, 
+.certification-item:hover .certification-icon {
+  transform: rotate(360deg);
+}
+
+/* Smooth Detail Item Animation */
+.detail-item {
+  transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1.0);
+}
+
+.detail-item:hover {
+  transform: translateX(5px);
+}
+
+.detail-item i {
+  transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1.0);
+}
+
+.detail-item:hover i {
+  transform: rotate(360deg);
+}
+
+/* Smooth Section Header Animation */
+.section-header h2 {
+  transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1.0);
+}
+
+.section-header:hover h2 {
+  transform: translateY(-5px);
+}
+
+.section-divider {
+  transition: width 0.5s cubic-bezier(0.25, 0.1, 0.25, 1.0);
+}
+
+.section-header:hover .section-divider {
+  width: 100px;
+}
+
+/* Smooth Skill Icon Animation */
+.skill-icon {
+  transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1.0), 
+              color 0.3s ease;
+}
+
+.skill-item:hover .skill-icon {
+  transform: scale(1.2) rotate(10deg);
+}
+
+/* Page Load Animation */
+.fade-in-up {
+  animation: fadeInUp 1s cubic-bezier(0.25, 0.1, 0.25, 1.0);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-down {
+  animation: fadeInDown 1s cubic-bezier(0.25, 0.1, 0.25, 1.0);
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-left {
+  animation: fadeInLeft 1s cubic-bezier(0.25, 0.1, 0.25, 1.0);
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-in-right {
+  animation: fadeInRight 1s cubic-bezier(0.25, 0.1, 0.25, 1.0);
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s cubic-bezier(0.25, 0.1, 0.25, 1.0);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Delay Animations */
+.delay-1 {
+  animation-delay: 0.1s;
+}
+
+.delay-2 {
+  animation-delay: 0.2s;
+}
+
+.delay-3 {
+  animation-delay: 0.3s;
+}
+
+.delay-4 {
+  animation-delay: 0.4s;
+}
+
+.delay-5 {
+  animation-delay: 0.5s;
+}
+
+/* Smooth Cursor Animation */
+.cursor-dot {
+  transition: transform 0.1s ease-out, 
+              background-color 0.3s ease;
+}
+
+.cursor-outline {
+  transition: transform 0.15s ease-out, 
+              width 0.3s ease, 
+              height 0.3s ease, 
+              border-color 0.3s ease;
+}
+
+/* Smooth Particle Animation */
+#particles-js canvas {
+  transition: opacity 1s ease;
+}
+
+/* Smooth Preloader Animation */
+.preloader {
+  transition: opacity 0.8s ease-in-out, 
+              visibility 0.8s ease-in-out;
+}
+
+.loader-inner {
+  transition: opacity 0.5s ease;
+}
+
+/* Smooth Header Content Animation */
+.header-content h1,
+.header-content h2,
+.header-content p,
+.header-buttons,
+.social-icons {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, 
+              transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1.0);
+}
+
+.header-content.animate h1 {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.2s;
+}
+
+.header-content.animate h2 {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.4s;
+}
+
+.header-content.animate p {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.6s;
+}
+
+.header-content.animate .header-buttons {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.8s;
+}
+
+.header-content.animate .social-icons {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 1s;
+}
+
+/* Smooth Profile Image Animation */
+.profile-image-container {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, 
+              transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1.0);
+}
+
+.profile-image-container.animate {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.5s;
+}
+
+/* Smooth Section Animation */
+.section-header {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, 
+              transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1.0);
+}
+
+.section-header.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Smooth Contact Form Animation */
+.contact-form-container {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, 
+              transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1.0);
+}
+
+.contact-form-container.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Smooth Contact Info Animation */
+.contact-info {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, 
+              transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1.0);
+}
+
+.contact-info.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Smooth Footer Animation */
+.footer {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, 
+              transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1.0);
+}
+
+.footer.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Smooth Education Section Animation */
+.education-section,
+.certifications-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, 
+              transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1.0);
+}
+
+.education-section.animate,
+.certifications-section.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Smooth About Content Animation */
+.about-content {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, 
+              transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1.0);
+}
+
+.about-content.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Smooth About Image Animation */
+.about-image {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, 
+              transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1.0);
+}
+
+.about-image.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Smooth Timeline Animation */
+.timeline {
+  transition: opacity 0.8s ease;
+}
+
+.timeline.animate {
+  opacity: 1;
+}
+
+/* Smooth Skill Category Animation */
+.skill-category {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, 
+              transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1.0);
+}
+
+.skill-category.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
