@@ -3,965 +3,465 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ahmad Faour | AI Engineer Portfolio</title>
-    <meta name="description" content="Professional portfolio of Ahmad Faour, AI Engineer specializing in machine learning, deep learning, and AI solutions">
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/img/favicon.png">
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- AOS Animation Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- Custom CSS -->
+    <title>Ahmad Faour | Senior AI Engineer</title>
+    <meta name="description" content="Portfolio of Ahmad Faour, a Senior AI Engineer with 5+ years of experience building LLM, RAG, agentic AI, computer vision, and production AI systems.">
+    <meta name="author" content="Ahmad Faour">
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Ahmad Faour | Senior AI Engineer">
+    <meta property="og:description" content="Senior AI Engineer with 5+ years delivering LLM, RAG, agentic AI, MLOps, and production-grade AI services.">
+    <meta property="og:image" content="https://ahmadsalehfaour.github.io/Portfolio/assets/img/profile.jpeg">
+    <meta property="og:url" content="https://ahmadsalehfaour.github.io/Portfolio/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ahmad Faour | Senior AI Engineer">
+    <meta name="twitter:description" content="5+ years building reliable LLM, RAG, agentic AI, and production AI systems.">
+    <meta name="twitter:image" content="https://ahmadsalehfaour.github.io/Portfolio/assets/img/profile.jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/interactive.css">
-    <link rel="stylesheet" href="assets/css/transitions.css">
-    <link rel="stylesheet" href="assets/css/accessibility.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
-    <link rel="stylesheet" href="assets/css/optimizations.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Ahmad Faour",
+        "jobTitle": "Senior AI Engineer",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Riyadh",
+            "addressCountry": "Saudi Arabia"
+        },
+        "email": "mailto:ahmad.saleh.faour@gmail.com",
+        "telephone": "+966596824729",
+        "url": "https://ahmadsalehfaour.github.io/Portfolio/",
+        "image": "https://ahmadsalehfaour.github.io/Portfolio/assets/img/profile.jpeg",
+        "sameAs": [
+            "https://linkedin.com/in/ahmad-faour",
+            "https://github.com/ahmadfaour9"
+        ],
+        "knowsAbout": [
+            "Large Language Models",
+            "Retrieval Augmented Generation",
+            "AI Agents",
+            "Machine Learning Operations",
+            "Computer Vision",
+            "Cloud AI Deployment"
+        ]
+    }
+    </script>
 </head>
 <body>
-    <!-- Preloader -->
-    <div class="preloader">
-        <div class="loader">
-            <div class="loader-inner"></div>
-        </div>
-    </div>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-    <!-- Custom Cursor -->
-    <div class="cursor-dot"></div>
-    <div class="cursor-outline"></div>
-
-    <!-- Skip to content link for accessibility -->
-    <a href="#page-top" class="skip-to-content">Skip to content</a>
-    
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-        <div class="container">
-            <a class="navbar-brand" href="#page-top">Ahmad Faour</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fas fa-bars ms-1"></i>
+    <header class="site-header" id="page-top">
+        <nav class="nav-shell" aria-label="Primary navigation">
+            <a class="brand" href="#page-top" aria-label="Ahmad Faour home">
+                <span class="brand-mark" aria-hidden="true">AF</span>
+                <span class="brand-text">Ahmad Faour</span>
+            </a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+                <span class="sr-only">Toggle navigation</span>
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ms-auto py-4 py-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+            <ul class="nav-links" id="primary-navigation">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Expertise</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- Particles Background -->
-    <div id="particles-js"></div>
-
-    <!-- Header/Hero Section -->
-    <header class="masthead" id="page-top">
-    <div class="container">
-        <div class="row align-items-center">
-            <!-- Text side -->
-            <div class="col-lg-7" data-aos="fade-right">
-                <div class="header-content">
-                    <h1 class="fade-in">Ahmad Faour</h1>
-                    <h2 class="text-gradient typing-effect">Senior AI / Software Engineer</h2>
-                    <p class="lead fade-in">
-                        Senior-leaning AI Engineer with ~4 years of combined professional experience delivering
-                        LLM-powered systems, autonomous AI agents, and production-grade services end-to-end —
-                        from data preparation and fine-tuning (PEFT/LoRA, RLHF) to optimization, ONNX export, and
-                        cloud deployment on AWS, GCP, and IIS.
+    <main id="main">
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-copy reveal">
+                    <p class="eyebrow">Senior AI Engineer · Riyadh, Saudi Arabia</p>
+                    <h1>Senior AI Engineer building reliable LLM, RAG, and agentic AI systems.</h1>
+                    <p class="hero-lede">
+                        5+ years of AI/ML and software delivery across LLM-powered platforms, RAG pipelines,
+                        computer-vision models, and cloud-ready AI services.
                     </p>
-                    <ul class="text-secondary fade-in" style="margin-left: 1.2rem;">
-                        <li>Bridges Python ML stacks with ASP.NET Core back ends and React front ends.</li>
-                        <li>Hands-on with agentic patterns (tool use, planning/execution, vector memory).</li>
-                        <li>Orchestrates workflows with n8n and Elsa Workflows, including human-in-the-loop flows.</li>
-                    </ul>
-
-                    <div class="header-buttons fade-in">
-                        <a href="#projects" class="btn btn-primary me-3">View AI Projects</a>
-                        <a href="#contact" class="btn btn-outline-light">Contact Me</a>
+                    <div class="hero-actions" aria-label="Primary actions">
+                        <a class="button button-primary" href="#projects">Explore work</a>
+                        <a class="button button-secondary" href="assets/docs/Ahmad-Faour-Senior-AI-Engineer-CV.pdf" download>Download CV</a>
                     </div>
+                </div>
 
-                    <div class="mt-4 d-flex flex-wrap gap-2">
-                        <span class="badge">LLMs & Agents</span>
-                        <span class="badge">MLOps & Deployment</span>
-                        <span class="badge">Full-Stack AI Apps</span>
+                <div class="hero-panel reveal" aria-label="AI engineering profile summary">
+                    <div class="profile-frame">
+                        <img src="assets/img/profile.jpeg" alt="Ahmad Faour, Senior AI Engineer" width="420" height="420">
                     </div>
-
-                    <div class="social-icons mt-4 fade-in">
-                        <a href="https://www.linkedin.com/in/ahmad-s-faour"
-                           target="_blank"
-                           rel="noopener"
-                           aria-label="LinkedIn Profile">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="https://github.com/ahmadfaour9"
-                           target="_blank"
-                           rel="noopener"
-                           aria-label="GitHub Profile">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="mailto:ahmad.saleh.faour@gmail.com"
-                           aria-label="Email Ahmad">
-                            <i class="fas fa-envelope"></i>
-                        </a>
+                    <div class="signal-board" aria-label="Career impact metrics">
+                        <div>
+                            <span>Experience</span>
+                            <strong>5+ years</strong>
+                        </div>
+                        <div>
+                            <span>NexusAI automation</span>
+                            <strong>60-80%</strong>
+                        </div>
+                        <div>
+                            <span>OCR accuracy</span>
+                            <strong>92%</strong>
+                        </div>
+                        <div>
+                            <span>Model size reduction</span>
+                            <strong>59%</strong>
+                        </div>
+                    </div>
+                    <div class="system-console" aria-label="AI systems stack">
+                        <div class="console-line"><span>LLM</span><b>RAG + structured outputs</b></div>
+                        <div class="console-line"><span>Agents</span><b>tool-calling + human review</b></div>
+                        <div class="console-line"><span>MLOps</span><b>Docker + CI/CD + monitoring</b></div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Image side -->
-            <div class="col-lg-5" data-aos="fade-left">
-                <div class="profile-image-container">
-                    <img src="assets/img/Untiled.jpg"
-                         alt="Portrait of Ahmad Faour, Senior AI / Software Engineer"
-                         class="img-fluid profile-image"
-                         width="320"
-                         height="320">
+        <section class="section" id="about">
+            <div class="container split-layout">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">About</p>
+                    <h2>Senior AI engineering for teams that need systems, not demos.</h2>
                 </div>
-            </div>
-        </div>
-    </div>
-</header>
-
-    <!-- About Section -->
-    <section id="about" class="section-padding">
-    <div class="container">
-        <div class="section-header text-center mb-5" data-aos="fade-up">
-            <h2 data-text="Who I Am">About Me</h2>
-            <div class="section-divider"></div>
-        </div>
-
-        <div class="row align-items-center">
-            <div class="col-lg-5 mb-4 mb-lg-0" data-aos="fade-right">
-                <div class="about-image">
-                    <img src="assets/img/Untiled.jpg"
-                         alt="Ahmad working on AI and software engineering projects"
-                         class="img-fluid rounded shadow-lg"
-                         width="400"
-                         height="400">
-                </div>
-            </div>
-
-            <div class="col-lg-7" data-aos="fade-left">
-                <div class="about-content">
-                    <h3>Building real-world AI systems, not just models</h3>
+                <div class="section-content reveal">
                     <p>
-                        I’m a Senior-leaning AI / Software Engineer with experience spanning AI/ML engineering,
-                        data science, and full-stack development. I design and ship LLM-powered applications,
-                        autonomous AI agents, and production-grade services — from data and training pipelines
-                        to APIs, front ends, and CI/CD.
+                        I combine applied AI research, full-stack engineering, and deployment experience to deliver
+                        reliable AI products end to end. My work covers data preparation, PEFT/LoRA fine-tuning,
+                        RLHF-style evaluation, prompt evaluation, quantization, ONNX export, RAG evaluation,
+                        secure APIs, and production rollout.
                     </p>
                     <p>
-                        My work bridges Python ML ecosystems with ASP.NET Core back ends, React UIs, and cloud
-                        infrastructure (AWS, GCP, IIS). I’m particularly focused on agentic patterns, retrieval
-                        workflows, quantization and optimization, and robust deployment of AI systems in production.
+                        I am strongest where AI models meet real products: Python ML services connected to ASP.NET Core
+                        and React, agent workflows coordinated with n8n and Elsa Workflows, vector memory, cloud deployment,
+                        CI/CD, observability, and human-in-the-loop operations.
                     </p>
-
-                    <div class="key-details mt-4">
-                        <div class="detail-item">
-                            <i class="fas fa-location-dot" aria-hidden="true"></i>
-                            <div>
-                                <strong>Location</strong>
-                                <div class="text-secondary">Riyadh, Saudi Arabia (open to remote/global roles)</div>
-                            </div>
-                        </div>
-
-                        <div class="detail-item">
-                            <i class="fas fa-robot" aria-hidden="true"></i>
-                            <div>
-                                <strong>Focus Areas</strong>
-                                <div class="text-secondary">
-                                    LLMs, AI agents, RAG pipelines, computer vision, NLP, MLOps & deployment.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="detail-item">
-                            <i class="fas fa-briefcase" aria-hidden="true"></i>
-                            <div>
-                                <strong>Experience</strong>
-                                <div class="text-secondary">
-                                    NVSSoft, Reality AI Lab, Darrebni, Freelancer.com, CampWallah.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="detail-item">
-                            <i class="fas fa-graduation-cap" aria-hidden="true"></i>
-                            <div>
-                                <strong>Education</strong>
-                                <div class="text-secondary">
-                                    M.Sc. Artificial Intelligence (in progress) — University of Hull<br>
-                                    B.Sc. Information Technology Engineering — University of Kalamoon (2nd in class)
-                                </div>
-                            </div>
-                        </div>
-                    </div><!-- /.key-details -->
+                    <div class="focus-strip" aria-label="Focus areas">
+                        <span>LLM applications</span>
+                        <span>RAG reliability</span>
+                        <span>Agent orchestration</span>
+                        <span>Computer vision</span>
+                        <span>MLOps</span>
+                        <span>Full-stack AI</span>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
 
-
-    <!-- Experience Section -->
-    <section id="experience" class="section-padding">
-    <div class="container">
-        <div class="section-header text-center mb-5" data-aos="fade-up">
-            <h2 data-text="Work History">Professional Experience</h2>
-            <div class="section-divider"></div>
-        </div>
-
-        <div class="row">
-            <div class="col-12">
+        <section class="section section-dark" id="experience">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">Experience</p>
+                    <h2>5+ years across AI/ML engineering, software development, evaluation, and deployment.</h2>
+                </div>
                 <div class="timeline">
-
-                    <!-- NVSSoft -->
-                    <div class="timeline-item" data-aos="fade-up">
-                        <div class="timeline-icon">
-                            <i class="fas fa-building" aria-hidden="true"></i>
+                    <article class="timeline-item reveal">
+                        <div class="timeline-date">Dec 2024 - Present</div>
+                        <div class="timeline-card">
+                            <h3>AI Engineer · NVSSoft</h3>
+                            <p class="role-meta">Full-time · On-site · Riyadh, Saudi Arabia</p>
+                            <ul>
+                                <li>Designed secure ASP.NET Core REST APIs with Entity Framework and Python-backed model inference services.</li>
+                                <li>Built React interfaces for real-time AI interactions and configured IIS production environments.</li>
+                                <li>Orchestrated agent workflows with n8n and Elsa Workflows, including webhooks, retries, scheduled jobs, and approvals.</li>
+                            </ul>
                         </div>
-                        <div class="timeline-content">
-                            <div class="timeline-date">Dec 2024 – Present · Riyadh, Saudi Arabia</div>
-                            <h3 class="timeline-title">AI Engineer (Full-time, On-site)</h3>
-                            <div class="timeline-company">NVSSoft</div>
-                            <div class="timeline-description">
-                                <ul>
-                                    <li>
-                                        Designed and implemented an ASP.NET Core application with a secure REST API layer
-                                        (Entity Framework/DbContext) and Python microservices for model inference.
-                                    </li>
-                                    <li>
-                                        Configured IIS and production environments for high availability and throughput;
-                                        partnered with DevOps to enable CI/CD with automated builds, tests, and multi-stage
-                                        deployments.
-                                    </li>
-                                    <li>
-                                        Built a React front end integrated with the .NET back end for real-time AI
-                                        interactions, reducing response latency and improving UX.
-                                    </li>
-                                    <li>
-                                        Instrumented AI agent workflows using n8n and Elsa Workflows (webhooks, scheduled
-                                        jobs, tool chaining, retries, and human-in-the-loop approvals).
-                                    </li>
-                                    <li>
-                                        Applied SOLID principles and clean architecture; authored internal documentation and
-                                        onboarding runbooks.
-                                    </li>
-                                </ul>
-                            </div>
+                    </article>
+                    <article class="timeline-item reveal">
+                        <div class="timeline-date">Dec 2025 - Present</div>
+                        <div class="timeline-card">
+                            <h3>AI Training &amp; Model Evaluation Specialist · micro1</h3>
+                            <p class="role-meta">Part-time · Remote</p>
+                            <ul>
+                                <li>Evaluated LLM outputs using rubrics for helpfulness, correctness, safety, style, and consistency.</li>
+                                <li>Supported RLHF/RLAIF-style workflows by refining prompts, diagnosing failure modes, and improving guidelines.</li>
+                                <li>Performed quality calibration to reduce evaluator variance while following strict data-handling requirements.</li>
+                            </ul>
                         </div>
-                    </div>
-
-                    <!-- Reality AI Lab -->
-                    <div class="timeline-item" data-aos="fade-up">
-                        <div class="timeline-icon">
-                            <i class="fas fa-flask" aria-hidden="true"></i>
+                    </article>
+                    <article class="timeline-item reveal">
+                        <div class="timeline-date">Dec 2024 - Dec 2025</div>
+                        <div class="timeline-card">
+                            <h3>AI Engineer · Reality AI Lab</h3>
+                            <p class="role-meta">Part-time · Remote</p>
+                            <ul>
+                                <li>Contributed to Marvel Model, a generative image model, through Python training and fine-tuning pipelines.</li>
+                                <li>Built tools for data augmentation, feature extraction, and custom evaluation metrics for image-based models.</li>
+                            </ul>
                         </div>
-                        <div class="timeline-content">
-                            <div class="timeline-date">Dec 2024 – Present · Remote</div>
-                            <h3 class="timeline-title">AI Engineer (Part-time, Remote)</h3>
-                            <div class="timeline-company">Reality AI Lab</div>
-                            <div class="timeline-description">
-                                <ul>
-                                    <li>
-                                        Contributed to Marvel Model, a next-gen generative image model, building Python
-                                        training/fine-tuning pipelines to improve stability and scalability.
-                                    </li>
-                                    <li>
-                                        Developed tooling for data augmentation, feature extraction, and custom metrics
-                                        for image-based evaluation; presented progress in sprint reviews.
-                                    </li>
-                                </ul>
-                            </div>
+                    </article>
+                    <article class="timeline-item reveal">
+                        <div class="timeline-date">Sep 2024 - Feb 2025</div>
+                        <div class="timeline-card">
+                            <h3>Data Scientist Intern · Darrebni</h3>
+                            <p class="role-meta">Part-time · Remote · Homs, Syria</p>
+                            <ul>
+                                <li>Built predictive models for customer behavior and market trends using advanced SQL and machine learning.</li>
+                                <li>Applied preprocessing, feature engineering, dimensionality reduction, and anomaly detection for actionable insights.</li>
+                                <li>Created Tableau dashboards and collaborated with product and engineering teams.</li>
+                            </ul>
                         </div>
-                    </div>
-
-                    <!-- Darrebni -->
-                    <div class="timeline-item" data-aos="fade-up">
-                        <div class="timeline-icon">
-                            <i class="fas fa-chart-line" aria-hidden="true"></i>
+                    </article>
+                    <article class="timeline-item reveal">
+                        <div class="timeline-date">Sep 2022 - Dec 2024</div>
+                        <div class="timeline-card">
+                            <h3>AI Engineer · Freelancer.com</h3>
+                            <p class="role-meta">Part-time · Remote</p>
+                            <ul>
+                                <li>Delivered NLP systems for classification, summarization, sentiment analysis, and Arabic handwriting recognition.</li>
+                                <li>Reduced model size by 59% with quantization and ONNX export while improving CPU inference speed.</li>
+                                <li>Built LangChain workflows and adapted models using PEFT and RLHF techniques.</li>
+                            </ul>
                         </div>
-                        <div class="timeline-content">
-                            <div class="timeline-date">Sep 2024 – Present · Remote</div>
-                            <h3 class="timeline-title">Data Scientist Intern (Part-time, Remote)</h3>
-                            <div class="timeline-company">Darrebni</div>
-                            <div class="timeline-description">
-                                <ul>
-                                    <li>
-                                        Built predictive models for customer behavior and market trends using advanced
-                                        SQL and ML, running uni/bivariate/multivariate analyses for actionable insights.
-                                    </li>
-                                    <li>
-                                        Performed feature engineering (preprocessing, normalization, dimensionality
-                                        reduction) and anomaly detection to improve decision quality.
-                                    </li>
-                                    <li>
-                                        Created interactive Tableau dashboards and collaborated with engineering/product
-                                        teams to integrate insights into workflows.
-                                    </li>
-                                </ul>
-                            </div>
+                    </article>
+                    <article class="timeline-item reveal">
+                        <div class="timeline-date">Apr 2024 - Jun 2024</div>
+                        <div class="timeline-card">
+                            <h3>Machine Learning Intern · CampWallah</h3>
+                            <p class="role-meta">Part-time · Remote · India</p>
+                            <ul>
+                                <li>Integrated ML models into production, increasing accuracy by approximately 25%.</li>
+                                <li>Built optimized data pipelines for real-time inference and supported API design for deployment and monitoring.</li>
+                            </ul>
                         </div>
-                    </div>
-
-                    <!-- Freelancer.com -->
-                    <div class="timeline-item" data-aos="fade-up">
-                        <div class="timeline-icon">
-                            <i class="fas fa-globe" aria-hidden="true"></i>
-                        </div>
-                        <div class="timeline-content">
-                            <div class="timeline-date">Sep 2022 – Dec 2024 · Remote</div>
-                            <h3 class="timeline-title">AI Engineer (Part-time, Remote)</h3>
-                            <div class="timeline-company">Freelancer.com</div>
-                            <div class="timeline-description">
-                                <ul>
-                                    <li>
-                                        Delivered NLP solutions (classification, summarization, sentiment analysis) using
-                                        Transformers; built Arabic handwriting recognition to ~85% accuracy.
-                                    </li>
-                                    <li>
-                                        Applied quantization and ONNX export to reduce model size by 59% and accelerate
-                                        inference on CPU-only environments (e.g. PythonAnywhere).
-                                    </li>
-                                    <li>
-                                        Constructed agentic/NLP workflows with LangChain, fine-tuning models with RLHF
-                                        and PEFT to improve response quality.
-                                    </li>
-                                    <li>
-                                        Optimized Node.js/Express back ends, improving throughput and reliability by
-                                        ~20%.
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- CampWallah -->
-                    <div class="timeline-item" data-aos="fade-up">
-                        <div class="timeline-icon">
-                            <i class="fas fa-laptop-code" aria-hidden="true"></i>
-                        </div>
-                        <div class="timeline-content">
-                            <div class="timeline-date">Apr 2024 – Jun 2024 · Remote</div>
-                            <h3 class="timeline-title">Machine Learning Intern (Part-time, Remote)</h3>
-                            <div class="timeline-company">CampWallah Sholay, India</div>
-                            <div class="timeline-description">
-                                <ul>
-                                    <li>
-                                        Integrated ML models into production, increasing accuracy by ~25% through
-                                        improved pipelines for real-time inference and secure API delivery.
-                                    </li>
-                                    <li>
-                                        Contributed to API design for seamless deployment and monitoring of ML models.
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                </div><!-- /.timeline -->
-            </div>
-        </div>
-    </div>
-</section>
-
-
-    <!-- Skills Section -->
-    <section id="skills" class="section-padding">
-    <div class="container">
-        <div class="section-header text-center mb-5" data-aos="fade-up">
-            <h2 data-text="Expertise">Technical Skills</h2>
-            <div class="section-divider"></div>
-        </div>
-
-        <div class="row g-4">
-            <!-- Programming Languages -->
-            <div class="col-md-6 col-lg-4" data-aos="fade-up">
-                <div class="skill-item">
-                    <div class="skill-icon"><i class="fas fa-code"></i></div>
-                    <h4>Programming</h4>
-                    <p class="text-secondary mb-2">
-                        Python, C#, JavaScript (React, Node.js), SQL, MATLAB
-                    </p>
-                    <div class="progress mt-2">
-                        <div class="progress-bar" role="progressbar"
-                             aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                        </div>
-                    </div>
+                    </article>
                 </div>
             </div>
+        </section>
 
-            <!-- ML / DL -->
-            <div class="col-md-6 col-lg-4" data-aos="fade-up">
-                <div class="skill-item">
-                    <div class="skill-icon"><i class="fas fa-brain"></i></div>
-                    <h4>ML & Deep Learning</h4>
-                    <p class="text-secondary mb-2">
-                        TensorFlow, PyTorch, Keras, scikit-learn, Pandas, NumPy;
-                        computer vision & NLP pipelines.
-                    </p>
-                    <div class="progress mt-2">
-                        <div class="progress-bar" role="progressbar"
-                             aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                        </div>
-                    </div>
+        <section class="section" id="projects">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">Selected Projects</p>
+                    <h2>Applied AI systems with measurable engineering outcomes.</h2>
                 </div>
-            </div>
-
-            <!-- LLMs & Agents -->
-            <div class="col-md-6 col-lg-4" data-aos="fade-up">
-                <div class="skill-item">
-                    <div class="skill-icon"><i class="fas fa-robot"></i></div>
-                    <h4>LLMs & Agents</h4>
-                    <p class="text-secondary mb-2">
-                        Hugging Face Transformers, LangChain, RAG, tool-calling,
-                        planner/executor patterns, vector memory, human-in-the-loop.
-                    </p>
-                    <div class="progress mt-2">
-                        <div class="progress-bar" role="progressbar"
-                             aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
+                <div class="project-grid">
+                    <article class="project-card project-featured reveal">
+                        <div class="project-meta">
+                            <span>Jan 2026 - Present</span>
+                            <span>Next.js · GCP · Vertex AI · BigQuery</span>
                         </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- MLOps & Deployment -->
-            <div class="col-md-6 col-lg-4" data-aos="fade-up">
-                <div class="skill-item">
-                    <div class="skill-icon"><i class="fas fa-cloud"></i></div>
-                    <h4>MLOps & Deployment</h4>
-                    <p class="text-secondary mb-2">
-                        Quantization, ONNX, Docker, REST APIs, ASP.NET Core,
-                        CI/CD, observability, IIS, PythonAnywhere, Heroku.
-                    </p>
-                    <div class="progress mt-2">
-                        <div class="progress-bar" role="progressbar"
-                             aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Orchestration & Workflows -->
-            <div class="col-md-6 col-lg-4" data-aos="fade-up">
-                <div class="skill-item">
-                    <div class="skill-icon"><i class="fas fa-diagram-project"></i></div>
-                    <h4>Orchestration & Workflows</h4>
-                    <p class="text-secondary mb-2">
-                        n8n, Elsa Workflows, scheduled jobs, retries,
-                        event-driven flows, approvals and HIL.
-                    </p>
-                    <div class="progress mt-2">
-                        <div class="progress-bar" role="progressbar"
-                             aria-valuenow="82" aria-valuemin="0" aria-valuemax="100">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Soft Skills -->
-            <div class="col-md-6 col-lg-4" data-aos="fade-up">
-                <div class="skill-item">
-                    <div class="skill-icon"><i class="fas fa-people-group"></i></div>
-                    <h4>Soft Skills</h4>
-                    <p class="text-secondary mb-2">
-                        Analytical thinking, problem solving, collaboration,
-                        communication, adaptability, time management, research,
-                        attention to detail, troubleshooting.
-                    </p>
-                    <div class="progress mt-2">
-                        <div class="progress-bar" role="progressbar"
-                             aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div><!-- /.row -->
-    </div>
-</section>
-
-
-    <!-- Projects Section -->
-    <section id="projects" class="section-padding">
-    <div class="container">
-        <div class="section-header text-center mb-5" data-aos="fade-up">
-            <h2 data-text="My Work">Selected Projects</h2>
-            <div class="section-divider"></div>
-        </div>
-
-        <div class="row g-4">
-
-            <!-- Smart Image Captioning with MoE -->
-            <div class="col-md-6" data-aos="fade-up">
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Smart Image Captioning with MoE</h3>
-                        <div class="project-tags">
-                            <span class="badge">Mixture-of-Experts</span>
-                            <span class="badge">Computer Vision</span>
-                            <span class="badge">LLMs</span>
-                            <span class="badge">Streamlit</span>
-                        </div>
-                    </div>
-                    <div class="project-body">
-                        <p class="text-secondary mb-2">
-                            Reality AI Lab · Sep 2025 – Oct 2025
+                        <h3>NexusAI: Intelligent Customer Experience Platform</h3>
+                        <p>
+                            Enterprise support automation platform for high-volume e-commerce, using intent classification,
+                            RAG, multilingual chat, agent takeover, live operations, Firestore monitoring, and BigQuery analytics.
                         </p>
-                        <ul>
-                            <li>
-                                Built a Mixture-of-Experts system combining a ResNet-50 vision expert with LLM-based
-                                captioning (via Ollama, e.g., llama3) using a gating network for confidence-aware routing.
-                            </li>
-                            <li>
-                                Designed modular <code>moe/</code> components (classifier, gating, templates, LLM client)
-                                with YAML-based configs and rich logging.
-                            </li>
-                            <li>
-                                Delivered both Streamlit UI for interactive testing and a CLI for batch captioning;
-                                packaged for Dockerized deployment.
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="project-footer">
-                        <a href="https://github.com/ahmadfaour9"
-                           target="_blank"
-                           rel="noopener"
-                           class="btn btn-outline-light btn-sm">
-                            View on GitHub
-                        </a>
-                        <span class="text-muted small">Vision · MoE · LLMs</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Schema-Aware Query Generator -->
-            <div class="col-md-6" data-aos="fade-up">
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Schema-Aware Query Generator</h3>
-                        <div class="project-tags">
-                            <span class="badge">RAG</span>
-                            <span class="badge">SQL</span>
-                            <span class="badge">Streamlit</span>
-                            <span class="badge">Vanna</span>
+                        <div class="impact-row">
+                            <strong>60-80% automated inquiries</strong>
+                            <strong>English/Arabic UX</strong>
+                            <strong>JWT + RBAC</strong>
                         </div>
-                    </div>
-                    <div class="project-body">
-                        <p class="text-secondary mb-2">
-                            Personal · Mar 2025 – May 2025
+                        <a href="https://github.com/ahmadfaour9/NexusAI-Intelligent-Customer-Experience-Platform" target="_blank" rel="noopener">View repository</a>
+                    </article>
+                    <article class="project-card reveal">
+                        <div class="project-meta">
+                            <span>Nov 2025 - Present</span>
+                            <span>Python · GraphRAG · Streamlit</span>
+                        </div>
+                        <h3>AI Research Intelligence Agent</h3>
+                        <p>
+                            Research intelligence system for paper discovery, deep analysis, Scientific Code Forge generation,
+                            repository mapping, claim auditing, and multi-agent debate reports.
                         </p>
-                        <ul>
-                            <li>
-                                Built a retrieval-augmented query assistant that ingests SQL DDL, docs, and prior queries,
-                                indexes them in ChromaDB, and uses Vanna+GPT to generate executable SQL from natural language.
-                            </li>
-                            <li>
-                                Implemented robust MSSQL connectivity and automatic DDL chunking for large schemas,
-                                plus incremental training from user uploads.
-                            </li>
-                            <li>
-                                Added a safe query runner (no <code>SELECT *</code>) and multi-chart analytics to accelerate
-                                ad-hoc reporting and reduce syntax errors.
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="project-footer">
-                        <a href="https://github.com/ahmadfaour9"
-                           target="_blank"
-                           rel="noopener"
-                           class="btn btn-outline-light btn-sm">
-                            View on GitHub
-                        </a>
-                        <span class="text-muted small">RAG · SQL · Analytics</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- AI Assistant with Voice Communication -->
-            <div class="col-md-6" data-aos="fade-up">
-                <div class="project-card">
-                    <div class="project-header">
+                        <a href="https://github.com/ahmadfaour9/AI-Research-Intelligence-Agent" target="_blank" rel="noopener">View repository</a>
+                    </article>
+                    <article class="project-card reveal">
+                        <div class="project-meta">
+                            <span>Oct 2024 - Present</span>
+                            <span>Whisper · MARBERTv2 · Flask</span>
+                        </div>
                         <h3>AI Assistant with Voice Communication</h3>
-                        <div class="project-tags">
-                            <span class="badge">Whisper v3</span>
-                            <span class="badge">Arabic NLP</span>
-                            <span class="badge">React</span>
-                            <span class="badge">Flask</span>
-                        </div>
-                    </div>
-                    <div class="project-body">
-                        <p class="text-secondary mb-2">
-                            Freelancer.com · Oct 2024 – Dec 2024
+                        <p>
+                            Multilingual, dialect-aware assistant combining Whisper v3, Arabic dialect classification,
+                            semantic matching, GPT-family reasoning, WebSockets, and orchestration flows.
                         </p>
-                        <ul>
-                            <li>
-                                Architected a multilingual, dialect-aware AI voice assistant using Whisper v3 and a
-                                fine-tuned UBC-NLP/MARBERTv2 model for Arabic dialect classification, with GPT-family
-                                LLMs for reasoning.
-                            </li>
-                            <li>
-                                Designed a modular, sub-500ms pipeline integrating ASR, NLP, and reasoning modules via REST.
-                            </li>
-                            <li>
-                                Built Flask API backend + React UI (WebSockets) and orchestrated flows in n8n/Elsa
-                                for events, retries, and human-in-the-loop review.
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="project-footer">
-                        <span class="text-muted small">Voice · LLMs · Orchestration</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Arabic Handwriting Recognition -->
-            <div class="col-md-6" data-aos="fade-up">
-                <div class="project-card">
-                    <div class="project-header">
+                        <div class="project-links">
+                            <a href="https://github.com/ahmadfaour9/AIVoiceAsisstent" target="_blank" rel="noopener">Repository</a>
+                            <a href="https://ai-voice-asisstent.vercel.app" target="_blank" rel="noopener">Live demo</a>
+                        </div>
+                    </article>
+                    <article class="project-card reveal">
+                        <div class="project-meta">
+                            <span>Mar 2025 - May 2025</span>
+                            <span>Streamlit · SQL Server · ChromaDB</span>
+                        </div>
+                        <h3>Schema-Aware Query Generator</h3>
+                        <p>
+                            Retrieval-grounded NL-to-SQL assistant with schema-aware guardrails, safe execution constraints,
+                            and validation checks that reduce hallucinated tables and columns.
+                        </p>
+                    </article>
+                    <article class="project-card reveal">
+                        <div class="project-meta">
+                            <span>Jun 2024 - Jul 2024</span>
+                            <span>TensorFlow · ONNX · Flask</span>
+                        </div>
                         <h3>Arabic Handwriting Recognition</h3>
-                        <div class="project-tags">
-                            <span class="badge">TensorFlow</span>
-                            <span class="badge">ONNX</span>
-                            <span class="badge">Flask</span>
-                        </div>
-                    </div>
-                    <div class="project-body">
-                        <p class="text-secondary mb-2">
-                            Personal / Freelance · Jun 2024 – Jul 2024
+                        <p>
+                            CNN-based Arabic character recognition trained on 120,000 samples, achieving 85% top-1 accuracy,
+                            59% model-size reduction, and 2.3x CPU inference speedup.
                         </p>
-                        <ul>
-                            <li>
-                                Developed a CNN-based Arabic character recognition model trained on 120k handwritten
-                                samples across 28 classes, achieving 85% top-1 accuracy.
-                            </li>
-                            <li>
-                                Applied quantization-aware training and ONNX conversion, reducing model size by 59%
-                                and achieving 2.3x CPU inference speedup.
-                            </li>
-                            <li>
-                                Deployed via Flask on PythonAnywhere, serving 5k+ requests/day without downtime.
-                            </li>
-                        </ul>
+                    </article>
+                    <article class="project-card reveal">
+                        <div class="project-meta">
+                            <span>Sep 2025 - Oct 2025</span>
+                            <span>ResNet-50 · Ollama · Docker</span>
+                        </div>
+                        <h3>Mixture-of-Experts Image Captioner</h3>
+                        <p>
+                            Hybrid image-captioning system that routes between fast template captions and richer LLM captions
+                            using confidence, entropy, color, and complexity signals.
+                        </p>
+                        <a href="https://github.com/ahmadfaour9/MOE" target="_blank" rel="noopener">View repository</a>
+                    </article>
+                    <article class="project-card reveal">
+                        <div class="project-meta">
+                            <span>Aug 2022 - Feb 2024</span>
+                            <span>GAN · CRNN · CTC Loss</span>
+                        </div>
+                        <h3>Handwritten Cardiac Prescription Recognition</h3>
+                        <p>
+                            Multitask OCR and verification pipeline for mixed Arabic/Latin prescriptions, seal detection,
+                            dosage standardization, 35% fewer interpretation errors, and 92% character-level accuracy.
+                        </p>
+                    </article>
+                    <article class="project-card reveal">
+                        <div class="project-meta">
+                            <span>Jan 2022 - Jun 2022</span>
+                            <span>Django · NLTK · Classical ML</span>
+                        </div>
+                        <h3>AI-Driven HR Management System</h3>
+                        <p>
+                            Recruitment tool using TF-IDF, NLTK, KNN/SVM/Random Forest models, role-based access,
+                            and automated candidate ranking that reduced shortlisting time by 40%.
+                        </p>
+                        <a href="https://github.com/ahmadfaour9/cv_project_with_AI" target="_blank" rel="noopener">View repository</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-warm" id="skills">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">Technical Expertise</p>
+                    <h2>Stack coverage from model design to production operations.</h2>
+                </div>
+                <div class="skills-grid">
+                    <section class="skill-group reveal" aria-labelledby="skill-programming">
+                        <h3 id="skill-programming">Programming</h3>
+                        <p>Python, C#, JavaScript/TypeScript, SQL, MATLAB</p>
+                    </section>
+                    <section class="skill-group reveal" aria-labelledby="skill-ml">
+                        <h3 id="skill-ml">AI/ML Frameworks</h3>
+                        <p>PyTorch, TensorFlow, Keras, scikit-learn, Pandas, NumPy, Hugging Face Transformers, ONNX</p>
+                    </section>
+                    <section class="skill-group reveal" aria-labelledby="skill-rag">
+                        <h3 id="skill-rag">LLM &amp; RAG Systems</h3>
+                        <p>Embeddings, chunking, retrieval, reranking, RAGAS, structured outputs, prompt evaluation, guardrails</p>
+                    </section>
+                    <section class="skill-group reveal" aria-labelledby="skill-vector">
+                        <h3 id="skill-vector">Vector &amp; LLM Platforms</h3>
+                        <p>ChromaDB, FAISS, Pinecone, Weaviate, Vertex AI, OpenAI, Anthropic</p>
+                    </section>
+                    <section class="skill-group reveal" aria-labelledby="skill-agents">
+                        <h3 id="skill-agents">Agents &amp; Orchestration</h3>
+                        <p>LangChain, n8n, Elsa Workflows, tool-calling, planner/executor patterns, long-context memory</p>
+                    </section>
+                    <section class="skill-group reveal" aria-labelledby="skill-backend">
+                        <h3 id="skill-backend">Backend &amp; APIs</h3>
+                        <p>FastAPI, Flask, ASP.NET Core, Entity Framework, REST APIs, WebSockets, Uvicorn, Gunicorn</p>
+                    </section>
+                    <section class="skill-group reveal" aria-labelledby="skill-devops">
+                        <h3 id="skill-devops">MLOps &amp; DevOps</h3>
+                        <p>Docker, Git, CI/CD, IIS, AWS, GCP, PythonAnywhere, Heroku, MLflow, W&amp;B, Airflow, Prefect</p>
+                    </section>
+                    <section class="skill-group reveal" aria-labelledby="skill-security">
+                        <h3 id="skill-security">Observability &amp; Security</h3>
+                        <p>OpenTelemetry, Prometheus, Grafana, PyTest, OAuth2, JWT, AWS Secrets Manager, GCP Secret Manager</p>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="education">
+            <div class="container education-grid">
+                <div class="reveal">
+                    <div class="section-heading align-left">
+                        <p class="eyebrow">Education</p>
+                        <h2>Academic foundation</h2>
                     </div>
-                    <div class="project-footer">
-                        <span class="text-muted small">CV · Quantization · Deployment</span>
+                    <div class="stack-list">
+                        <article>
+                            <span>Sep 2025 - Present</span>
+                            <h3>M.Sc. in Artificial Intelligence</h3>
+                            <p>University of Hull · Hull, United Kingdom</p>
+                            <p>Focus on computer vision, deep learning, and LLM applications.</p>
+                        </article>
+                        <article>
+                            <span>Aug 2018 - Feb 2024</span>
+                            <h3>B.Sc. in Information Technology Engineering</h3>
+                            <p>University of Kalamoon · GPA 3.08 / 4.00 (83 / 100)</p>
+                            <p>Graduated with distinction and achieved the second-highest rank in class.</p>
+                        </article>
+                        <article>
+                            <span>Aug 2016 - May 2018</span>
+                            <h3>Diploma in Computer Technology</h3>
+                            <p>Yousef Seman Industrial High School · GPA 92 / 100</p>
+                            <p>Top academic performer and ranked fifth in the governorate in final 12th-grade exams.</p>
+                        </article>
+                    </div>
+                </div>
+                <div class="reveal">
+                    <div class="section-heading align-left">
+                        <p class="eyebrow">Credentials</p>
+                        <h2>Certifications &amp; awards</h2>
+                    </div>
+                    <div class="credential-list">
+                        <article><span>Feb 2026 · Google</span><h3>Develop AI-Powered Prototypes in Google AI Studio</h3></article>
+                        <article><span>Oct 2025 · micro1</span><h3>AI Software Engineer</h3></article>
+                        <article><span>Oct 2024 · Coursera &amp; AWS</span><h3>Generative AI with Large Language Models</h3></article>
+                        <article><span>Dec 2024 · Duke University &amp; Coursera</span><h3>Introduction to Retrieval Augmented Generation</h3></article>
+                        <article><span>Feb 2025 · Kaggle</span><h3>Intermediate Machine Learning</h3></article>
+                        <article><span>Nov 2024 · Kaggle</span><h3>Feature Engineering</h3></article>
+                        <article><span>Feb 2024 · University of Kalamoon</span><h3>Second Place in Graduation Class</h3></article>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <!-- (Optional) Add your cardiac prescription & HR system projects similarly -->
-
-        </div>
-    </div>
-</section>
-
-    <!-- Education Section -->
-    <section id="education" class="section-padding">
-    <div class="container">
-        <div class="section-header text-center mb-5" data-aos="fade-up">
-            <h2 data-text="Background">Education & Certifications</h2>
-            <div class="section-divider"></div>
-        </div>
-
-        <div class="row">
-            <!-- Education -->
-            <div class="col-lg-6">
-                <div class="education-section" data-aos="fade-up">
-                    <h3><i class="fas fa-graduation-cap"></i> Education</h3>
-
-                    <!-- Hull -->
-                    <div class="education-item">
-                        <div class="education-icon">
-                            <i class="fas fa-university" aria-hidden="true"></i>
-                        </div>
-                        <div class="education-content">
-                            <h4>University of Hull</h4>
-                            <div class="education-degree">M.Sc. in Artificial Intelligence (in progress)</div>
-                            <div class="education-date">Sep 2025 – Present · Hull, United Kingdom</div>
-                            <div class="education-details text-secondary">
-                                Focus on computer vision, deep learning, and LLM applications.
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Kalamoon -->
-                    <div class="education-item">
-                        <div class="education-icon">
-                            <i class="fas fa-university" aria-hidden="true"></i>
-                        </div>
-                        <div class="education-content">
-                            <h4>University of Kalamoon</h4>
-                            <div class="education-degree">B.Sc. in Information Technology Engineering</div>
-                            <div class="education-gpa">GPA: 3.08 (83/100) · 2nd highest rank in class</div>
-                            <div class="education-date">Aug 2018 – Feb 2024 · Deiratiah, Syria</div>
-                            <div class="education-details text-secondary">
-                                Coursework: AI, ML, Neural Networks, Data Mining, Pattern Recognition,
-                                Deep Learning, NLP, Algorithms, Database Systems, Cybersecurity.
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Diploma -->
-                    <div class="education-item">
-                        <div class="education-icon">
-                            <i class="fas fa-school" aria-hidden="true"></i>
-                        </div>
-                        <div class="education-content">
-                            <h4>Yousef Seman Industrial High School</h4>
-                            <div class="education-degree">Diploma in Computer Technology</div>
-                            <div class="education-date">Aug 2016 – May 2018 · Yabroud, Syria</div>
-                            <div class="education-details text-secondary">
-                                GPA 92/100; ranked 5th in governorate. Courses in programming, electronics,
-                                digital logic, networking, and applied mathematics.
-                            </div>
-                        </div>
-                    </div>
+        <section class="contact-section" id="contact">
+            <div class="container contact-grid">
+                <div class="reveal">
+                    <p class="eyebrow">Contact</p>
+                    <h2>Available for senior AI engineering, applied research, and production AI collaborations.</h2>
+                    <p>
+                        Reach out for LLM systems, RAG reliability, AI agents, computer vision, MLOps, or full-stack AI delivery.
+                    </p>
                 </div>
+                <address class="contact-panel reveal">
+                    <a href="mailto:ahmad.saleh.faour@gmail.com">ahmad.saleh.faour@gmail.com</a>
+                    <a href="tel:+966596824729">+966 59 682 4729</a>
+                    <a href="https://linkedin.com/in/ahmad-faour" target="_blank" rel="noopener">linkedin.com/in/ahmad-faour</a>
+                    <a href="https://github.com/ahmadfaour9" target="_blank" rel="noopener">github.com/ahmadfaour9</a>
+                    <a href="assets/docs/Ahmad-Faour-Senior-AI-Engineer-CV.pdf" download>Download CV</a>
+                </address>
             </div>
+        </section>
+    </main>
 
-            <!-- Certifications -->
-            <div class="col-lg-6">
-                <div class="certifications-section" data-aos="fade-up">
-                    <h3><i class="fas fa-certificate"></i> Certifications & Awards</h3>
-
-                    <div class="certification-item">
-                        <div class="certification-icon">
-                            <i class="fas fa-book-open" aria-hidden="true"></i>
-                        </div>
-                        <div class="certification-content">
-                            <h4>Generative AI with Large Language Models</h4>
-                            <div class="certification-provider">Coursera & AWS · Oct 2024</div>
-                            <div class="certification-details text-secondary">
-                                Mastered transformer architectures, PEFT/LoRA, and RLHF; deployed LLMs on cloud.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="certification-item">
-                        <div class="certification-icon">
-                            <i class="fas fa-book-open" aria-hidden="true"></i>
-                        </div>
-                        <div class="certification-content">
-                            <h4>Introduction to Retrieval Augmented Generation (RAG)</h4>
-                            <div class="certification-provider">Duke University & Coursera · Dec 2024</div>
-                            <div class="certification-details text-secondary">
-                                Built RAG pipelines using Python, LLMs, and vector databases.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="certification-item">
-                        <div class="certification-icon">
-                            <i class="fas fa-book-open" aria-hidden="true"></i>
-                        </div>
-                        <div class="certification-content">
-                            <h4>Intermediate Machine Learning</h4>
-                            <div class="certification-provider">Kaggle · Feb 2025</div>
-                            <div class="certification-details text-secondary">
-                                Applied XGBoost, advanced preprocessing, and cross-validation.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="certification-item">
-                        <div class="certification-icon">
-                            <i class="fas fa-book-open" aria-hidden="true"></i>
-                        </div>
-                        <div class="certification-content">
-                            <h4>Feature Engineering</h4>
-                            <div class="certification-provider">Kaggle · Nov 2024</div>
-                            <div class="certification-details text-secondary">
-                                Designed feature engineering workflows to boost model performance.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="certification-item">
-                        <div class="certification-icon">
-                            <i class="fas fa-cloud" aria-hidden="true"></i>
-                        </div>
-                        <div class="certification-content">
-                            <h4>AWS EMEA Innovate: Migrate. Modernize. Build.</h4>
-                            <div class="certification-provider">AWS · Oct 2024</div>
-                            <div class="certification-details text-secondary">
-                                Learned scalable AI deployments on AWS cloud infrastructure.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="certification-item">
-                        <div class="certification-icon">
-                            <i class="fas fa-infinity" aria-hidden="true"></i>
-                        </div>
-                        <div class="certification-content">
-                            <h4>Azure DevOps: Intro to CI/CD</h4>
-                            <div class="certification-provider">United Latino Students Association · Mar 2024</div>
-                            <div class="certification-details text-secondary">
-                                Integrated ML model deployment into CI/CD workflows.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="certification-item">
-                        <div class="certification-icon">
-                            <i class="fas fa-award" aria-hidden="true"></i>
-                        </div>
-                        <div class="certification-content">
-                            <h4>Data Science Internship</h4>
-                            <div class="certification-provider">Darrebni · Mar 2025</div>
-                            <div class="certification-details text-secondary">
-                                Predictive modeling, data visualization, and SQL pipelines supporting business decisions.
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-    <!-- Contact Section -->
-    <section id="contact" class="section-padding">
-        <div class="container">
-            <div class="section-header text-center mb-5" data-aos="fade-up">
-                <h2 data-text="Reach Out">Get In Touch</h2>
-                <div class="section-divider"></div>
-            </div>
-            <div class="row">
-                <div class="col-lg-5 mb-4 mb-lg-0" data-aos="fade-right">
-                    <div class="contact-info">
-                        <h3>Contact Information</h3>
-                        <p>Feel free to reach out to discuss AI projects, collaboration opportunities, or just to connect!</p>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
-                            <div>
-                                <h4>Location</h4>
-                                <p>Riyadh, Saudi Arabia</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-envelope" aria-hidden="true"></i>
-                            <div>
-                                <h4>Email</h4>
-                                <p>ahmad.saleh.faour@gmail.com</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone" aria-hidden="true"></i>
-                            <div>
-                                <h4>Phone</h4>
-                                <p>+966-596824729</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
-                            <div>
-                                <h4>LinkedIn</h4>
-                                <p>linkedin.com/in/ahmad-faour</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fab fa-github" aria-hidden="true"></i>
-                            <div>
-                                <h4>GitHub</h4>
-                                <p>github.com/ahmadfaour9</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-7" data-aos="fade-left">
-                    <div class="contact-form-container">
-                        <form id="contactForm" class="contact-form">
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <div class="form-group">
-                                        <label for="name" class="form-label">Your Name</label>
-                                        <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <div class="form-group">
-                                        <label for="email" class="form-label">Your Email</label>
-                                        <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group mb-3">
-                                <label for="subject" class="form-label">Subject</label>
-                                <input type="text" class="form-control" id="subject" placeholder="Enter subject" required>
-                            </div>
-                            <div class="form-group mb-4">
-                                <label for="message" class="form-label">Message</label>
-                                <textarea class="form-control" id="message" rows="5" placeholder="Enter your message" required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Send Message</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 mb-4 mb-lg-0">
-                    <h3>Ahmad Faour</h3>
-                    <p>AI Engineer specializing in machine learning, deep learning, and generative AI solutions.</p>
-                    <div class="social-icons">
-                        <a href="https://linkedin.com/in/ahmad-faour" target="_blank" aria-label="LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://github.com/ahmadfaour9" target="_blank" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
-                        <a href="mailto:ahmad.saleh.faour@gmail.com" aria-label="Email Me"><i class="fas fa-envelope"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-4 mb-lg-0">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#experience">Experience</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#education">Education</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-4">
-                    <h3>Contact</h3>
-                    <ul class="footer-contact">
-                        <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Riyadh, Saudi Arabia</li>
-                        <li><i class="fas fa-envelope" aria-hidden="true"></i> ahmad.saleh.faour@gmail.com</li>
-                        <li><i class="fas fa-phone" aria-hidden="true"></i> +966-596824729</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Ahmad Faour. All Rights Reserved.</p>
-            </div>
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <p>&copy; 2026 Ahmad Faour. Senior AI Engineer.</p>
+            <a href="#page-top">Back to top</a>
         </div>
     </footer>
 
-    <!-- Back to Top Button -->
-    <a href="#page-top" class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up" aria-hidden="true"></i></a>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- AOS Animation Library -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!-- Particles.js -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <!-- Vanilla Tilt.js -->
-    <script src="https://unpkg.com/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js"></script>
-    <!-- Custom JS -->
     <script src="assets/js/script.js"></script>
 </body>
 </html>
